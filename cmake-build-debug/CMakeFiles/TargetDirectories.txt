@@ -1,0 +1,3 @@
+C:/Users/niema/CLionProjects/ita-cpp/cmake-build-debug/CMakeFiles/ita_cpp.dir
+C:/Users/niema/CLionProjects/ita-cpp/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/niema/CLionProjects/ita-cpp/cmake-build-debug/CMakeFiles/rebuild_cache.dir
