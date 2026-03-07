@@ -19,7 +19,7 @@ struct tageszeittyp {
             cin >> stunde >> minute >> sekunde;
 
             if (stunde < 0 || stunde > 23 || minute < 0 || minute > 59 || sekunde < 0 || sekunde > 59) {
-                cout << "Ungueltige Zeit! Bitte erneut eingeben:" << endl;
+                cout << "Ungültige Zeit!!!! Bitte erneut eingeben:" << endl;
             }
 
         } while (stunde < 0 || stunde > 23 || minute < 0 || minute > 59 || sekunde < 0 || sekunde > 59);
