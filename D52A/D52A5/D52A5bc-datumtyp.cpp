@@ -2,6 +2,9 @@
 using namespace std;
 
 struct datum {
+
+private:
+
     int tag;
     int monat;
     int jahr;
@@ -30,6 +33,15 @@ struct datum {
                 return 0;
         };
     };
+public:
+
+
+    void init(int t, int m, int j) {
+        tag = t;
+        monat = m;
+        jahr = j;
+    }
+
     void display() {
 
         cout << tag << "." << monat << "." << jahr << endl;
@@ -61,31 +73,26 @@ struct datum {
             }
         }
     }
+// checkt intern die schaltjahrfunktion aus weil die privat ist
+    void check_schaltjahr() {
+        if (is_schaltjahr()) cout << "Ist ein Schaltjahr" << endl;
+        else cout << "Kein Schaltjahr" << endl;
+    }
+
+
 };
 
 
 int main() {
 
-    struct datum test;
+    datum test;
 
-    cout << "Bitte Tag Monat und Jahr mit Eingabe getrennt eingeben (keine Ungültigen Werte!!!!!!)" << endl;
-    cin >> test.tag;
-    cin >> test.monat;
-    cin >> test.jahr;
+    // Richtig: Über init setzen (oder über eine neue public scan-Methode)
+    test.init(13, 3, 2026);
 
     test.display();
-
-    if(test.is_schaltjahr())  {
-        cout << "Jau, issn Schaltjahr" << endl; // erscheint bei 2028
-    } else { cout << "Keen Schaltjahr..." << endl; }
-
-    cout << "Der Monat hat " << test.anzahl_tage() << "Tage..." << endl;
-
-    test.tag_vor();
-    test.display();
-
-    test.tag_zurueck();
-    test.display();
+    test.check_schaltjahr(); // Ruft intern die private Methode auf
 
     return 0;
+
 }
